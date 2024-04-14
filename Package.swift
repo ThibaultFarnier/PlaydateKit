@@ -13,6 +13,9 @@ let playdateSDKPath: String = if let path = Context.environment["PLAYDATE_SDK_PA
 
 let package = Package(
     name: "PlaydateKit",
+    platforms: [
+      .macOS(.v14)
+    ],
     products: [
         .library(name: "PlaydateKit", targets: ["PlaydateKit"]),
         .plugin(name: "PDCPlugin", targets: ["PDCPlugin"])
